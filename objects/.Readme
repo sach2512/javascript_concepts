@@ -1,0 +1,50 @@
+ovbject is a non primitive data type which stores the value in the form of key and pair
+The Object type represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities.
+
+ways to creating objects
+
+1) using object literals
+2) using constrctors
+
+objectliterals
+
+we have two ways to acess the object literals
+1)Dot
+2) through objectname["property]
+
+Manipulating the objects--refer objectliterals.js line num 28
+
+If you Understand Objects, you Understand JavaScript.
+because in javascript everything is an object
+
+
+
+Objects are objects
+Maths are objects
+Functions are objects
+Dates are objects
+Arrays are objects
+Maps are objects
+Sets are objects
+All JavaScript values, except primitives, are objects.
+
+what are primitives
+
+we know primitives data types of 7 types 
+string
+number
+boolean
+null
+undefined
+symbol
+bigint  so all the numbers stored by these data types are primitive data types
+
+mutablity of objects
+
+it is a refernce type datatype where it is compared based on the address type rather than value
+
+objects rae mutable 
+When you assign one object to another variable, you're not creating a copy of the object. Instead, you're creating a new reference to the same object in memory. Therefore, changes made to the object through either reference will be reflected in both. --line number 45
+
+
+
