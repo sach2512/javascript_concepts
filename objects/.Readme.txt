@@ -43,8 +43,10 @@ mutablity of objects
 
 it is a refernce type datatype where it is compared based on the address type rather than value
 
-objects rae mutable 
+objects are mutable 
 When you assign one object to another variable, you're not creating a copy of the object. Instead, you're creating a new reference to the same object in memory. Therefore, changes made to the object through either reference will be reflected in both. --line number 45
 
 
+object methods
 
+1) Object.keys == it will return all the keys of an object in the array form 
