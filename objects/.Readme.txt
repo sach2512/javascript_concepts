@@ -50,3 +50,77 @@ When you assign one object to another variable, you're not creating a copy of th
 object methods
 
 1) Object.keys == it will return all the keys of an object in the array form 
+2) Object.values == it will return all the values in the form of array
+3) Object.entries == it will return the array of key and value
+4)Object.defineProperty() is a method used to define or modify a property on an object, providing fine-grained control over its characteristics. With this method, you can specify the property's value, and control its attributes such as whether it is writable, enumerable, and configurable.
+
+=>Key Features:
+Value Assignment: You can set the value of the property.
+Writable: Determines if the property's value can be changed.
+Enumerable: Controls whether the property appears in enumerations (e.g., for...in loops).
+Configurable: Specifies if the property descriptor can be changed or if the property can be deleted.
+By using Object.defineProperty(), you can create properties with precise behaviors and attributes, allowing for more robust and controlled object manipulation in JavaScript
+
+5) Object.defineProperties also do same 
+
+=> the key differnce between both is
+Object.defineProperties() is a method used to define or modify multiple properties on an object at once. 
+It provides the ability to set detailed property descriptors for each property, 
+offering fine-grained control over their attributes.
+
+6)Object.freeze()
+Object.freeze() is used to make an object immutable. When you freeze an object:
+
+No Modifications: Existing properties cannot be changed. Their values are set and cannot be modified.
+No New Properties: You cannot add new properties to the object.
+No Deletions: Existing properties cannot be deleted.
+Non-configurable: All properties are made non-configurable, meaning their descriptors cannot be changed.
+In summary, Object.freeze() fully locks down an object, making it completely immutable.
+
+7)Object.seal()
+Object.seal() is used to seal an object, preventing certain changes:
+
+No New Properties: You cannot add new properties to the object.
+No Deletions: Existing properties cannot be deleted.
+Modifications Allowed: Existing properties can still be modified if they are writable.
+Non-configurable: All existing properties are made non-configurable, meaning their descriptors cannot be changed, but their values can still be updated if writable.
+
+
+8)Object.hasown
+
+it is a method used to determine if an object has a specific property as its own,
+ directly defined property (not inherited from its prototype chain).
+
+ 9)object.create
+ it is a method that creates a new object with a specified prototype object and optional properties.
+
+Key Features:
+Prototype Inheritance: Sets the prototype of the new object to the specified prototype object, enabling inheritance of properties and methods.
+Additional Properties (optional): Allows defining additional properties on the new object with specific descriptors
+
+
+
+there are other methods too please refer mdn website below to explore more 
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+
+deepcopy and shallow copy
+
+deepcopy ----  call by value
+shallowcopy -- pass by reference
+
+javascript by deafult creates shallow copy of non primitive datatypes
+they share differnt memory address 
+so if you chnage copy it will not affeect the orginal 
+
+but whereas if you take non primitive datatypes 
+javascript bu default creates shallow copy of them so any chnage in copied value will chnage in orginal too
+
+there are three methods to create deep copy of the objects
+
+1) object.assign and spread operator // drawback :cant perform for nested objects
+2) json.stringiy // if there are any functions in the objects its not suitable
+3) loadash package 
+
