@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: max-content;
+        padding: 30px;
+        border:2px solid red;
+       
+    }
+</style>
+<body>
+    <div id="#grandparent">
+        <div id="#parent">
+            <div id="#child">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //false fowllos bubling pattern
+    //true follows event capturing pattern
+    // element.addEventListener(event, function, useCapture);
+    //usecapture is a boolean value which tells which event propagtion should follow by default its false and so follows bubbling
+
+    // document.getElementById("#grandparent").addEventListener("click",()=>{
+    //     alert("grandparent clicked")
+    // },false)
+    // document.getElementById("#parent").addEventListener("click",()=>{
+    //     alert("parent clicked")
+    // },false)
+
+    // document.getElementById("#child").addEventListener("click",()=>{
+    //     alert("child clicked")
+    // },false)
+    // document.getElementById("#grandparent").addEventListener("click",()=>{
+    //     alert("grandparent clicked")
+    // },true)
+    // document.getElementById("#parent").addEventListener("click",()=>{
+    //     alert("parent clicked")
+    // },true)
+
+    // document.getElementById("#child").addEventListener("click",()=>{
+    //     alert("child clicked")
+    // },true)
+    document.getElementById("#grandparent").addEventListener("click",()=>{
+        alert("grandparent clicked")
+    },true)
+    document.getElementById("#parent").addEventListener("click",()=>{
+        alert("parent clicked")
+    },true)
+
+    document.getElementById("#child").addEventListener("click",()=>{
+        alert("child clicked")
+    },false)
+</script>
+</html>

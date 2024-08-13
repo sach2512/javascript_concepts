@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>keyboard events</h1>
+    <input type="text" id="text">
+    <button class="btn-class" id="buton1" onclick="buttonclick(this,event)">click me</button>
+</body>
+<script>
+    function buttonclick(obj,e){
+        document.write({
+            classname :`${obj.classname}`,
+            idname: `${obj.id}`,
+
+            clientx: `${e.clientx}`,
+            clienty :`${e.clienty}`,
+            ctrlkey:`${e.ctrlkey}`,
+           
+        })
+        console.log(e);
+    }
+
+   
+
+    var elem =document.getElementById("text");
+    elem.addEventListener("keypress",(e)=>{
+        console.log(` charcode : ${e.charCode} + keycode: ${e.keyCode} + key: ${e.key}`);
+        
+    })
+
+    elem.addEventListener("keyup",(e)=>{
+        console.log(` charcode : ${e.charCode} + keycode: ${e.keyCode} + key: ${e.key}`);
+    })
+    elem.addEventListener("keydown",(e)=>{
+        console.log(` charcode : ${e.charCode} + keycode: ${e.keyCode} + key: ${e.key}`);
+    })
+
+// keyup means when presskey and relese it then its counted as keyup
+</script>
+</html>

@@ -1,0 +1,51 @@
+Event is a message send by sender to its subscriber in order to notify the changes
+it follows a observer design pattern
+
+
+subscriber contain what action to perorm and sender sends notification
+onclick = insertclick()
+
+onclick -- event 
+insertclick -- event handler
+
+event handler is a delgate it points to the function 
+
+every event handler contains default argumets 
+this and event
+
+
+this contain object related information like -- name id class value
+event information is like client x ,client y ,keycode,charcode
+
+one more way to add event is 
+Addeventlistner("event",functionname)
+
+when we can assign a function then y do we need add event listner
+
+
+assign a function allows us to add only one function per button 
+whereas addeventlisten we can add multiple events to single events
+addeventlistner suports differntphases like event bubling event capturing and event delegation whereas assignevent differnt
+addEventListener: Allows you to remove an event listener using removeEventListener, providing more control over event handling.
+onclick: You cannot remove an event handler in the same way, as assigning null to onclick removes the handler but doesn't offer fine control like removeEventListener
+
+various types of events
+
+1) keyboard events
+2)mouse events
+3)clipboard events
+4)button events
+5) timer events
+6) touch events
+
+Event bubling 
+event capturing 
+
+
+lets suppose we have a grandparent div and  a parent div and a children div  and the ways the events 
+behaves when we click each of them is known as even propgration which includes both event bubblibg and event capturing aka event triggering
+
+in the event bubbling the propagtion follows bottom to top approch the event starts at the target element and then bubbles up through its ancestors in the DOM tree.
+whereas in event capturing the propagtion follows top to bottom  approch the event starts at the target element and then bubbles up through its ancestors in the DOM tree.
+
+
