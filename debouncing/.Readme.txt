@@ -1,0 +1,12 @@
+**Debouncing** is a technique used to improve performance by controlling how often a function is executed. It’s especially useful when dealing with events that can trigger multiple times, like typing in a search box or scrolling. 
+
+**Example Use Case**:
+In a search box, each key press can trigger a network call to fetch search suggestions. Without debouncing, these frequent calls can slow down the app and overload the server. Debouncing helps by waiting for a short period after the user stops typing before making the call. This reduces the number of network requests and improves app performance.
+
+**How It Works**:
+1. **Set a Delay**: When an event occurs, a timer starts or resets.
+2. **Wait and Execute**: The function is executed only after the timer finishes without further events.
+3. **Optimize Performance**: This prevents multiple, rapid function executions and reduces unnecessary network calls.
+
+By using debouncing, you ensure that your app runs more smoothly and efficiently.
+
