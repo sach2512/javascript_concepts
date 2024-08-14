@@ -43,9 +43,22 @@ event capturing
 
 
 lets suppose we have a grandparent div and  a parent div and a children div  and the ways the events 
-behaves when we click each of them is known as even propgration which includes both event bubblibg and event capturing aka event triggering
+behaves when we click each of them is known as even propgration which includes both event bubblibg 
+and event capturing aka event triggering
 
-in the event bubbling the propagtion follows bottom to top approch the event starts at the target element and then bubbles up through its ancestors in the DOM tree.
-whereas in event capturing the propagtion follows top to bottom  approch the event starts at the target element and then bubbles up through its ancestors in the DOM tree.
+in the event bubbling the propagtion follows bottom to top approch the event starts at the target 
+element and then bubbles up through its ancestors in the DOM tree.
+whereas in event capturing the propagtion follows top to bottom
+approch the event starts at the target element and then bubbles up through its ancestors in the DOM tree.
+
+first the propagtion where the event starts from the root and travels down to the target element.
+and captures all the true in the way and reaches the tartet element thn bubbles up 
+
+to stop event if have a speical event propertos e.stoppropagtion()
 
 
+event delegation 
+
+
+Instead of attaching an event handler to each individual element, you attach a 
+single event handler to a common parent element. This handler will then manage events for its child elements.

@@ -51,9 +51,10 @@
     document.getElementById("#grandparent").addEventListener("click",()=>{
         alert("grandparent clicked")
     },true)
-    document.getElementById("#parent").addEventListener("click",()=>{
+    document.getElementById("#parent").addEventListener("click",(e)=>{
         alert("parent clicked")
-    },true)
+        e.stopPropagation();
+    },false)
 
     document.getElementById("#child").addEventListener("click",()=>{
         alert("child clicked")
