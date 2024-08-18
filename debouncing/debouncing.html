@@ -20,6 +20,18 @@ let count =0;
     // so in the above case for everycall api is called which is not the ideal way 
     // to solve these problem we have debounce is javascript 
 
+    function higherorder(fn,waittime){
+        let timeoutid;
+        return()=>{
+            if(timeoutid){
+                clearTimeout(timeoutid)
+            }
+       timeoutid= setTimeout(()=>{ getdata(),waittime})
+        }
+    }
+// we have wraped the getdata in a higher order function and that function will return a out function 
+//after the waittime for everykeypress
+// now to call it once we need to use cleartimeout
     document.getElementById("text").addEventListener("keyup",getdata)
 
 </script>

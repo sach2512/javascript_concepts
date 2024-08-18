@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 async is a keyword that is used before a function to create async function
 it is used to handle asynchronous operations
 these async function always return promise
@@ -32,38 +31,10 @@ If multiple await statements are present, they are resolved in sequence.
 Logging Order:
 
 If there are multiple promises with await, they are resolved in the order they are awaited. However, if one promise resolves faster than another, it will be handled as soon as it resolves, potentially out of order with respect to the code's appearance.
-=======
-async is a keyword that is used before a function to create async function
-it is used to handle asynchronous operations
-these async function always return promise
-even if we return non promise value like string or boolean these function will wrap it in promise and return as a promise
-async and await are used to handle promises
-await is a keyword can only be used inside async function
 
 
-when we have promise way then and catch blocks to handle promise again y do we need async and await?
-in normal promise js engine dont wait for promise to resolve to go next line 
-where as in async await js engine wait for promise to reolve to go to next line 
-
-Execution Context: 
-JavaScript is single-threaded, meaning it executes code line by line in the context of the call stack.
-
-Async/Await Handling:
-
-When the JavaScript engine encounters an await statement inside an async function, it pauses the execution of that function until the promise returned by await is resolved.
-The await expression effectively moves the execution of the async function to the background, allowing the call stack to continue executing other code.
-
-
-Call Stack:
-
-While the await is in place, the call stack is not blocked. The JavaScript engine can continue executing other code, such as other functions or event handlers.
-Promise Resolution:
-
-Once the promise resolves, the async function’s execution resumes from the point where it was paused, continuing with the resolved value.
-If multiple await statements are present, they are resolved in sequence.
-
-
-Logging Order:
-
-If there are multiple promises with await, they are resolved in the order they are awaited. However, if one promise resolves faster than another, it will be handled as soon as it resolves, potentially out of order with respect to the code's appearance.
->>>>>>> 1ff3ac1ddfa8f3c1d96afe11adea11198992a38a
+settimeout are placed in microtaskq uues
+promises are handled in microtask quue
+and micro task qiuues are executed before macro tas qiuues
+and in async await all the code insid epromise gets execute when the control see await keyowrds and the code 
+after await stops and executes after prmose is resolved

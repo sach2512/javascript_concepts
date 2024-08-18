@@ -10,3 +10,14 @@ In a search box, each key press can trigger a network call to fetch search sugge
 
 By using debouncing, you ensure that your app runs more smoothly and efficiently.
 
+
+How settimeout and clear timeout work toghether
+
+
+ok for first time preesing a key (keyup event) there is  event which is 
+scheudled after waititme seconds and now at these time settime out creates a unique timeout id to these
+ and before that if a user clicks the event is again occured now cleartimeout will clear the queued 
+ function and now stores the new timeoutid and if in mean time 
+ if user types again the old timeout is again cleared andd new 
+ one is stored and now if user dnt register event now(keypress)
+settimeout will execute  
